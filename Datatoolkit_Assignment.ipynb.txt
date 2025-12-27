@@ -1,0 +1,754 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Theory Questions"
+      ],
+      "metadata": {
+        "id": "t018UZGAJ7jx"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. What is NumPy, and why is it widely used in Python?\n",
+        "\n",
+        "      - NumPy is a Python library used for working with numbers and arrays.It is fast, memory-efficient, and great for mathematical operations.\n",
+        "        "
+      ],
+      "metadata": {
+        "id": "7sNiqyY-KBwk"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. How does broadcasting work in numpy\n",
+        "\n",
+        "    - Broadcasting lets numpy perform operation on arrays of different shapes.smaller array are automatically expended to match larger ones"
+      ],
+      "metadata": {
+        "id": "sJpfsX2XLTA-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. What is pandas DataFrame?\n",
+        "    \n",
+        "      - A DataFrame is a table-like structure with rows and columns. it is used to store,analyze,and manipulate data easily  "
+      ],
+      "metadata": {
+        "id": "XmIKyyBYMp02"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Explain the use of groupby() method in pandas?\n",
+        "\n",
+        "     - groupby() is used to split data into groups based on a column . you can then apply functions like sum,mean or count"
+      ],
+      "metadata": {
+        "id": "PnzUEYM7NFxt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. What are the difference between Numpy arrays and python lists?\n",
+        "\n",
+        "      - Numpy arrays are faster and use less memory than python lists .they support mathematical operations directly.  "
+      ],
+      "metadata": {
+        "id": "AE9iCSjTNrJ7"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. What does the term \"vectorized operation\" mean in Numpy?\n",
+        "\n",
+        "    - vectorized operation apply calculations to entire arrays at once.this makes the code faster and shorter\n",
+        "          "
+      ],
+      "metadata": {
+        "id": "QeFGdmhrOGB9"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10. what is the significance of hierarchical indexing in pandas?\n",
+        "\n",
+        "     -  Hierarchical indexing allows multiple index levels in DataFrame. it helps manage and analyze complex,multi-dimensional data."
+      ],
+      "metadata": {
+        "id": "JivgaucFPEYy"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "12. what is the purpose of the describe() function in pandas?\n",
+        "\n",
+        "   - describe() gives a quick summary of numerical data.it shows count , mean,min,max and other statistics.\n"
+      ],
+      "metadata": {
+        "id": "DLDqPqvCPv7_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "13. why is handling missing data important in pandas?\n",
+        "\n",
+        "     -  missing data can give wrong analysis results. pandas provides tool to fill ,remove or detect missing values."
+      ],
+      "metadata": {
+        "id": "X4_ubZM-QPdn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "15. How does Numpy handle multidimensional arrays?\n",
+        "\n",
+        "\n",
+        "    - Numpy supports arrays with Multi dimensions (1D,2D,3D.etc.) . these are useful for matrics ,images and scientific data"
+      ],
+      "metadata": {
+        "id": "c_SKFCj6Qlaq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "17. Explain the difference between apply() and map() in Pandas?\n",
+        "\n",
+        "    - map() works on a single Series\n",
+        "    - apply() can work on both Series and DataFrame"
+      ],
+      "metadata": {
+        "id": "EP0NrJUwRZ24"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "18. what  is the some advance features of Numpy?\n",
+        "\n",
+        "    -  Numpy supports linear algebra , random numbers generation and it allows fast operations on large datasets."
+      ],
+      "metadata": {
+        "id": "tnW3V1J5RvQg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "19. how does pandas simplify time series analysis?\n",
+        "\n",
+        "    -  Pandas has bulit in data and time functions. it makes resampling ,shifting and rolling calculations easy"
+      ],
+      "metadata": {
+        "id": "KVmAsUhnSCUj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "20. what is the role of a pivot table in Pandas?\n",
+        "\n",
+        "    -  A pivot table summarise data using rows,column and vales . it helps analyze large datasets quickly"
+      ],
+      "metadata": {
+        "id": "qw1TiAZSSZTX"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "21. Why is Numpy's array slicing faster than Python's list slicing\n",
+        "\n",
+        "    - numbers and slices over range/strings are faster because they are simpler,fixed and closer to C-level operations while list slicing has a copy objects and manage references"
+      ],
+      "metadata": {
+        "id": "_dAEzKxKSwB4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Practicle Questions"
+      ],
+      "metadata": {
+        "id": "Zvj7AmCYUxVm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Q1. how do you create a 2D Numpy Array and calculate the sum of each row ?\n",
+        "\n",
+        "import numpy as np\n",
+        "\n",
+        "arr=np.array([[1,2,3],[4,5,6]])\n",
+        "sum= arr.sum(axis=1)\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CxdJ0U65U1O7",
+        "outputId": "7fa85921-d1ef-4d51-8fb5-8518f08aba32"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[ 6 15]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Q2. write a pandas script to find the mean of a specific column in a DataFrame\n",
+        "\n",
+        "import pandas as pd\n",
+        "df=pd.DataFrame({\"marks\":[70,80,90]})\n",
+        "mean=df[\"marks\"].mean()\n",
+        "mean"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O4YIR6FvVpHy",
+        "outputId": "cea6106b-ebf5-43be-b916-d2cc9affff76"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "np.float64(80.0)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Q6. create a DataFrame and add a new column based on a existing column\n",
+        "\n",
+        "import pandas as pd\n",
+        "\n",
+        "df=pd.DataFrame({\"Age\":[31,33,42]})\n",
+        "df[\"After 5 years \"]=df[\"Age\"]+5\n",
+        "print(df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DpIG2SPpWYDt",
+        "outputId": "d5791641-5b75-4058-f61a-1772eda51956"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   Age  After 5 years \n",
+            "0   31              36\n",
+            "1   33              38\n",
+            "2   42              47\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Q7. write a program to perform element wise multiplication of two Numpy arrays\n",
+        "\n",
+        "import numpy as np\n",
+        "\n",
+        "a=np.array([[1,2,3],[4,8,4]])\n",
+        "b=np.array([[4,5,6],[4,2,1]])\n",
+        "result=a*b\n",
+        "result"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MZ0yMY7aXSZu",
+        "outputId": "d018ecc2-48e3-4375-ad19-6b5ca80571d6"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[ 4, 10, 18],\n",
+              "       [16, 16,  4]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Q9. Generate a panda DataFrame and filter rows where column value is greater than a threasold\n",
+        "\n",
+        "import pandas as pd\n",
+        "df=pd.DataFrame({\"score\":[55,67,34]})\n",
+        "filter=df[df[\"score\"]>50]\n",
+        "filter"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 125
+        },
+        "id": "fL07xsQlk2QE",
+        "outputId": "903f0b06-fd59-4567-d045-634717c3d9d6"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "   score\n",
+              "0     55\n",
+              "1     67"
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-72663c77-d824-4faa-8344-8efe77c5ef49\" class=\"colab-df-container\">\n",
+              "    <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>score</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>55</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>67</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>\n",
+              "    <div class=\"colab-df-buttons\">\n",
+              "\n",
+              "  <div class=\"colab-df-container\">\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-72663c77-d824-4faa-8344-8efe77c5ef49')\"\n",
+              "            title=\"Convert this dataframe to an interactive table.\"\n",
+              "            style=\"display:none;\">\n",
+              "\n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
+              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
+              "  </svg>\n",
+              "    </button>\n",
+              "\n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-buttons div {\n",
+              "      margin-bottom: 4px;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "    <script>\n",
+              "      const buttonEl =\n",
+              "        document.querySelector('#df-72663c77-d824-4faa-8344-8efe77c5ef49 button.colab-df-convert');\n",
+              "      buttonEl.style.display =\n",
+              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "      async function convertToInteractive(key) {\n",
+              "        const element = document.querySelector('#df-72663c77-d824-4faa-8344-8efe77c5ef49');\n",
+              "        const dataTable =\n",
+              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                    [key], {});\n",
+              "        if (!dataTable) return;\n",
+              "\n",
+              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "          + ' to learn more about interactive tables.';\n",
+              "        element.innerHTML = '';\n",
+              "        dataTable['output_type'] = 'display_data';\n",
+              "        await google.colab.output.renderOutput(dataTable, element);\n",
+              "        const docLink = document.createElement('div');\n",
+              "        docLink.innerHTML = docLinkHtml;\n",
+              "        element.appendChild(docLink);\n",
+              "      }\n",
+              "    </script>\n",
+              "  </div>\n",
+              "\n",
+              "\n",
+              "    <div id=\"df-d4e3a733-7d4d-46a1-87ca-577ef66c02cc\">\n",
+              "      <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-d4e3a733-7d4d-46a1-87ca-577ef66c02cc')\"\n",
+              "                title=\"Suggest charts\"\n",
+              "                style=\"display:none;\">\n",
+              "\n",
+              "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
+              "     width=\"24px\">\n",
+              "    <g>\n",
+              "        <path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z\"/>\n",
+              "    </g>\n",
+              "</svg>\n",
+              "      </button>\n",
+              "\n",
+              "<style>\n",
+              "  .colab-df-quickchart {\n",
+              "      --bg-color: #E8F0FE;\n",
+              "      --fill-color: #1967D2;\n",
+              "      --hover-bg-color: #E2EBFA;\n",
+              "      --hover-fill-color: #174EA6;\n",
+              "      --disabled-fill-color: #AAA;\n",
+              "      --disabled-bg-color: #DDD;\n",
+              "  }\n",
+              "\n",
+              "  [theme=dark] .colab-df-quickchart {\n",
+              "      --bg-color: #3B4455;\n",
+              "      --fill-color: #D2E3FC;\n",
+              "      --hover-bg-color: #434B5C;\n",
+              "      --hover-fill-color: #FFFFFF;\n",
+              "      --disabled-bg-color: #3B4455;\n",
+              "      --disabled-fill-color: #666;\n",
+              "  }\n",
+              "\n",
+              "  .colab-df-quickchart {\n",
+              "    background-color: var(--bg-color);\n",
+              "    border: none;\n",
+              "    border-radius: 50%;\n",
+              "    cursor: pointer;\n",
+              "    display: none;\n",
+              "    fill: var(--fill-color);\n",
+              "    height: 32px;\n",
+              "    padding: 0;\n",
+              "    width: 32px;\n",
+              "  }\n",
+              "\n",
+              "  .colab-df-quickchart:hover {\n",
+              "    background-color: var(--hover-bg-color);\n",
+              "    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "    fill: var(--button-hover-fill-color);\n",
+              "  }\n",
+              "\n",
+              "  .colab-df-quickchart-complete:disabled,\n",
+              "  .colab-df-quickchart-complete:disabled:hover {\n",
+              "    background-color: var(--disabled-bg-color);\n",
+              "    fill: var(--disabled-fill-color);\n",
+              "    box-shadow: none;\n",
+              "  }\n",
+              "\n",
+              "  .colab-df-spinner {\n",
+              "    border: 2px solid var(--fill-color);\n",
+              "    border-color: transparent;\n",
+              "    border-bottom-color: var(--fill-color);\n",
+              "    animation:\n",
+              "      spin 1s steps(1) infinite;\n",
+              "  }\n",
+              "\n",
+              "  @keyframes spin {\n",
+              "    0% {\n",
+              "      border-color: transparent;\n",
+              "      border-bottom-color: var(--fill-color);\n",
+              "      border-left-color: var(--fill-color);\n",
+              "    }\n",
+              "    20% {\n",
+              "      border-color: transparent;\n",
+              "      border-left-color: var(--fill-color);\n",
+              "      border-top-color: var(--fill-color);\n",
+              "    }\n",
+              "    30% {\n",
+              "      border-color: transparent;\n",
+              "      border-left-color: var(--fill-color);\n",
+              "      border-top-color: var(--fill-color);\n",
+              "      border-right-color: var(--fill-color);\n",
+              "    }\n",
+              "    40% {\n",
+              "      border-color: transparent;\n",
+              "      border-right-color: var(--fill-color);\n",
+              "      border-top-color: var(--fill-color);\n",
+              "    }\n",
+              "    60% {\n",
+              "      border-color: transparent;\n",
+              "      border-right-color: var(--fill-color);\n",
+              "    }\n",
+              "    80% {\n",
+              "      border-color: transparent;\n",
+              "      border-right-color: var(--fill-color);\n",
+              "      border-bottom-color: var(--fill-color);\n",
+              "    }\n",
+              "    90% {\n",
+              "      border-color: transparent;\n",
+              "      border-bottom-color: var(--fill-color);\n",
+              "    }\n",
+              "  }\n",
+              "</style>\n",
+              "\n",
+              "      <script>\n",
+              "        async function quickchart(key) {\n",
+              "          const quickchartButtonEl =\n",
+              "            document.querySelector('#' + key + ' button');\n",
+              "          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.\n",
+              "          quickchartButtonEl.classList.add('colab-df-spinner');\n",
+              "          try {\n",
+              "            const charts = await google.colab.kernel.invokeFunction(\n",
+              "                'suggestCharts', [key], {});\n",
+              "          } catch (error) {\n",
+              "            console.error('Error during call to suggestCharts:', error);\n",
+              "          }\n",
+              "          quickchartButtonEl.classList.remove('colab-df-spinner');\n",
+              "          quickchartButtonEl.classList.add('colab-df-quickchart-complete');\n",
+              "        }\n",
+              "        (() => {\n",
+              "          let quickchartButtonEl =\n",
+              "            document.querySelector('#df-d4e3a733-7d4d-46a1-87ca-577ef66c02cc button');\n",
+              "          quickchartButtonEl.style.display =\n",
+              "            google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "        })();\n",
+              "      </script>\n",
+              "    </div>\n",
+              "\n",
+              "  <div id=\"id_b315425f-2be5-40d1-98ac-58a29ccb0c75\">\n",
+              "    <style>\n",
+              "      .colab-df-generate {\n",
+              "        background-color: #E8F0FE;\n",
+              "        border: none;\n",
+              "        border-radius: 50%;\n",
+              "        cursor: pointer;\n",
+              "        display: none;\n",
+              "        fill: #1967D2;\n",
+              "        height: 32px;\n",
+              "        padding: 0 0 0 0;\n",
+              "        width: 32px;\n",
+              "      }\n",
+              "\n",
+              "      .colab-df-generate:hover {\n",
+              "        background-color: #E2EBFA;\n",
+              "        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "        fill: #174EA6;\n",
+              "      }\n",
+              "\n",
+              "      [theme=dark] .colab-df-generate {\n",
+              "        background-color: #3B4455;\n",
+              "        fill: #D2E3FC;\n",
+              "      }\n",
+              "\n",
+              "      [theme=dark] .colab-df-generate:hover {\n",
+              "        background-color: #434B5C;\n",
+              "        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "        fill: #FFFFFF;\n",
+              "      }\n",
+              "    </style>\n",
+              "    <button class=\"colab-df-generate\" onclick=\"generateWithVariable('filter')\"\n",
+              "            title=\"Generate code using this dataframe.\"\n",
+              "            style=\"display:none;\">\n",
+              "\n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
+              "       width=\"24px\">\n",
+              "    <path d=\"M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z\"/>\n",
+              "  </svg>\n",
+              "    </button>\n",
+              "    <script>\n",
+              "      (() => {\n",
+              "      const buttonEl =\n",
+              "        document.querySelector('#id_b315425f-2be5-40d1-98ac-58a29ccb0c75 button.colab-df-generate');\n",
+              "      buttonEl.style.display =\n",
+              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "      buttonEl.onclick = () => {\n",
+              "        google.colab.notebook.generateWithVariable('filter');\n",
+              "      }\n",
+              "      })();\n",
+              "    </script>\n",
+              "  </div>\n",
+              "\n",
+              "    </div>\n",
+              "  </div>\n"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "dataframe",
+              "variable_name": "filter",
+              "summary": "{\n  \"name\": \"filter\",\n  \"rows\": 2,\n  \"fields\": [\n    {\n      \"column\": \"score\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 8,\n        \"min\": 55,\n        \"max\": 67,\n        \"num_unique_values\": 2,\n        \"samples\": [\n          67,\n          55\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}"
+            }
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Q11. Perform matrix multiplication using Numpy\n",
+        "\n",
+        "import numpy as np\n",
+        "\n",
+        "a=np.array([[3,5],[1,5]])\n",
+        "b=np.array([[3,5],[6,8]])\n",
+        "result=np.dot(a,b)\n",
+        "result"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O9y_MIgGmYbw",
+        "outputId": "2e1d58f7-efbc-41f4-f72a-f0a4e06189b8"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[39, 55],\n",
+              "       [33, 45]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Q12.Use panda to load a CSV file and display its first 5 rows\n",
+        "\n",
+        "import pandas as pd\n",
+        "\n",
+        "df=pd.read_csv(\"/content/sample_data/california_housing_test.csv\")\n",
+        "print(df.head())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O2sORGPMm8Oo",
+        "outputId": "58c683f8-49f9-479f-cd63-268a00baa2f6"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   longitude  latitude  housing_median_age  total_rooms  total_bedrooms  \\\n",
+            "0    -122.05     37.37                27.0       3885.0           661.0   \n",
+            "1    -118.30     34.26                43.0       1510.0           310.0   \n",
+            "2    -117.81     33.78                27.0       3589.0           507.0   \n",
+            "3    -118.36     33.82                28.0         67.0            15.0   \n",
+            "4    -119.67     36.33                19.0       1241.0           244.0   \n",
+            "\n",
+            "   population  households  median_income  median_house_value  \n",
+            "0      1537.0       606.0         6.6085            344700.0  \n",
+            "1       809.0       277.0         3.5990            176500.0  \n",
+            "2      1484.0       495.0         5.7934            270500.0  \n",
+            "3        49.0        11.0         6.1359            330000.0  \n",
+            "4       850.0       237.0         2.9375             81700.0  \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Due to hardware related issues with my laptop, i was unable to complete the lecture as required and that's the reason i could not attempt the question related to matplotlib,plotly and bokeh . Once the laptop issues are resolved , i will complete the remaining topics at the earliest."
+      ],
+      "metadata": {
+        "id": "5Xv_3bmJo2tC"
+      }
+    }
+  ]
+}
